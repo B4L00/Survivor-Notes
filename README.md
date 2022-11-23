@@ -15,6 +15,9 @@ Raccourcis de vim, de terminal et autres tips utiles.
 # VIM
 **I**		insert mode<br />
 **:x** 	enregistre et quitte<br />
+**:w**  enregistre<br />
+**:wq** enregistre et auitte (equivalent a **:x**)<br />
+**:q**  quitte<br />
 <br />
 **^**		debut de ligne<br />
 **$**		fin de ligne<br />
