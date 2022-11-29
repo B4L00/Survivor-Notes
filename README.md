@@ -50,5 +50,9 @@ Les regles fonctionnent comme suit : <br />
 **%.o:	%.c**  cree les .o a partir des .c, doit etre suivi par la ligne suivante :<br />
 >**$(CC) $(CFLAGS) -c $< -o $@**<br />
 
+# Valgrind
+
+**--leak-check=full** : Voir toutes les fuites <br>
+**--track-origines=yes** : Trouver l'origine des variables non initialisees.
 
 
