@@ -4,12 +4,12 @@ Raccourcis de vim, de terminal et autres tips utiles.
 
 
 # Terminator
-**ctrl-shift-E**  separe la fenetre actuelle en une nouvelle fenetre vertical<br />
-**ctrl-shift-O**  separe la fenetre actuelle en une nouvelle fenetre horizontal<br />
-**ctrl-shift-W**  ferme la fenetre actuelle<br />
-**ctrl-shift-N**  (Next) prochaine fenetre<br />
-**ctrl-shift-P**  (Previous) fenetre precedente<br />
-**ctrl-shift-X**  Passe en plein ecran la fenetre actuelle (faire pareil pour revenir comme avant)
+**ctrl-shift-E**  sépare la fenetre actuelle en une nouvelle fenêtre verticale<br />
+**ctrl-shift-O**  sépare la fenetre actuelle en une nouvelle fenêtre horizontale<br />
+**ctrl-shift-W**  ferme la fenêtre actuelle<br />
+**ctrl-shift-N**  (Next) prochaine fenêtre<br />
+**ctrl-shift-P**  (Previous) fenêtre précèdente<br />
+**ctrl-shift-X**  Passe en plein écran la fenêtre actuelle (faire pareil pour revenir comme avant)
 
 
 # VIM
@@ -19,40 +19,42 @@ Raccourcis de vim, de terminal et autres tips utiles.
 **:wq** enregistre et quitte (equivalent a **:x**)<br />
 **:q**  quitte<br />
 <br />
-**^**		debut de ligne<br />
+**yy**  copier une ligne<br />
+**p**   coller la ligne précédemment copiée<br />
+**^**		début de ligne<br />
 **$**		fin de ligne<br />
-**gg**	debut du fichier<br />
+**gg**	début du fichier<br />
 **G**		fin de fichier<br />
 
 
 # Makefile
-' **:=** '	definit une constante<br />
-' **=** '		definit une variable<br />
+' **:=** '	définit une constante<br />
+' **=** '		définit une variable<br />
 <br />
 **CC**			:=	pour le compilateur (cc, clang, gcc, g++ ...)<br />
 **CFLAGS** 	:=	pour les flags (-Wall -Werror -Wextra ...)<br />
 **CPPFLAGS** := pour les flags en C++
-**NAME**		:=  nom de l'executable cree<br />
-**SRCS**		:=  tous les fichiers sources utiles pour creer l'exec<br />
+**NAME**		:=  nom de l'éxecutable créé<br />
+**SRCS**		:=  tous les fichiers sources utiles pour créer l'éxec<br />
 file1\ <br />
 file2\ <br />
 file3 <br />
-**OBJ**			:=  **$(SRCS:.c=.o)** liste des objets crees a partir de **SRCS**<br />
+**OBJ**			:=  **$(SRCS:.c=.o)** liste des objets crées à partir de **SRCS**<br />
 
 ### Regles
 **all**  make par defaut<br />
 <br />
-Les regles fonctionnent comme suit : <br />
+Les règles fonctionnent comme suit : <br />
 **resultat : sources**<br />
-**$<** fait reference a la source de la regle<br />
-**$@** fait reference au(x) resultat(s) de la regle<br />
+**$<** fait réference à la source de la règle<br />
+**$@** fait réference au(x) resultat(s) de la règle<br />
 <br />
-**%.o:	%.c**  cree les .o a partir des .c, doit etre suivi par la ligne suivante :<br />
+**%.o:	%.c**  crée les .o à partir des .c, doit être suivi par la ligne suivante :<br />
 >**$(CC) $(CFLAGS) -c $< -o $@**<br />
 
 # Valgrind
 
 **--leak-check=full** : Voir toutes les fuites <br>
-**--track-origins=yes** : Trouver l'origine des variables non initialisees.
+**--track-origins=yes** : Trouver l'origine des variables non initialisées.
 
 
