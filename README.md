@@ -25,6 +25,7 @@ Raccourcis de vim, de terminal et autres tips utiles.
 **$**		fin de ligne<br />
 **gg**	début du fichier<br />
 **G**		fin de fichier<br />
+**shift + V** sélectionne une ligne (retaper pour retirer)<br />
 
 
 # Makefile
