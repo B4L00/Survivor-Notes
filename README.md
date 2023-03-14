@@ -16,7 +16,7 @@ Raccourcis de vim, de terminal et autres tips utiles.
 **I**		insert mode<br />
 **:x** 	enregistre et quitte<br />
 **:w**  enregistre<br />
-**:wq** enregistre et auitte (equivalent a **:x**)<br />
+**:wq** enregistre et quitte (equivalent a **:x**)<br />
 **:q**  quitte<br />
 <br />
 **^**		debut de ligne<br />
@@ -53,6 +53,6 @@ Les regles fonctionnent comme suit : <br />
 # Valgrind
 
 **--leak-check=full** : Voir toutes les fuites <br>
-**--track-origines=yes** : Trouver l'origine des variables non initialisees.
+**--track-origins=yes** : Trouver l'origine des variables non initialisees.
 
 
