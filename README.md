@@ -5,6 +5,11 @@ Raccourcis de vscode, de vim, de terminal et autres tips utiles.
 # Sommaire
 
 - [Terminator](#Terminator)
+- [VSCode](#VSCode)
+- [VIM](#VIM)
+- [Makefile](#Makefile)
+- [Compilation](#Compilation)
+- [Valgrind](#Valgrind)
 
 
 ## Terminator
