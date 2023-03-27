@@ -77,7 +77,8 @@ Raccourcis de vscode, de vim, de terminal et autres tips utiles.
 **CPPFLAGS** := pour les flags en C++
 **NAME**		:=  nom de l'éxecutable créé<br />
 **SRCS**		:=  tous les fichiers sources utiles pour créer l'éxec<br />
-**OBJ**			:=   toud les objets crées à partir de **SRCS**<br />
+**OBJ**			:=   tous les objets crées à partir de **SRCS**<br />
+**%.c** fait référence à tout les fichiers .c (idem pour %.o)<br />
 **$<** fait réference à la source de la règle<br />
 **$@** fait réference au(x) resultat(s) de la règle<br />
 <br />
