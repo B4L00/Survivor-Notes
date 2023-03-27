@@ -92,7 +92,7 @@ $(NAME):        $(OBJ)
         @mv $(LIBFT_D)/libft.a .
         @ar rcs $(NAME) $(OBJ) <-- facultatif, seulement pour creer une biblio
 
-%$(SRCS_D).o:   %$(SRCS_D).c
+%.o:   %.c
         $(CC) $(CFLAGS) -I include -c $< -o $@
 
 clean:
