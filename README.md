@@ -8,7 +8,13 @@ Raccourcis de vscode, de vim, de terminal et autres tips utiles.
 - [VSCode](#VSCode)
 - [VIM](#VIM)
 - [Makefile](#Makefile)
+  - [Regles](#Regles)
+  - [Noms et definitions](#Noms et definitions)
+  - [prefix / suffix](#prefix / suffix)
+  - [Exemple](#Exemple)
 - [Compilation](#Compilation)
+  - [Fonctionnement](#Fonctionnement)
+  - [Options](#Options)
 - [Valgrind](#Valgrind)
 
 
