@@ -10,7 +10,7 @@ Raccourcis de vscode, de vim, de terminal et autres tips utiles.
 - [Makefile](#Makefile)
   - [Regles](#Regles)
   - [Noms et definitions](https://github.com/B4L00/Survivor-Notes#noms-et-definitions)
-  - [prefix / suffix](#prefix / suffix)
+  - [prefix / suffix](https://github.com/B4L00/Survivor-Notes#prefix--suffix)
   - [Exemple](#Exemple)
 - [Compilation](#Compilation)
   - [Fonctionnement](#Fonctionnement)
