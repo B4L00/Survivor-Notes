@@ -42,33 +42,79 @@ Raccourcis de vscode, de vim, de terminal et autres tips utiles.
 
 
 # Makefile
-' **:=** '	définit une constante<br />
-' **=** '		définit une variable<br />
+
+### Regles
+**all**     make par defaut<br />
+**clean**   supprime les .o <br />
+**fclean**  supprime les .o et l'executable / biblio<br />
+**re**      comme fclean et re make derriere<br />
 <br />
+### Noms et definitions
+**"VAR :="**  definit la constante VAR<br />
+**$(VAR)**  utilise la variable VAR<br />
 **CC**			:=	pour le compilateur (cc, clang, gcc, g++ ...)<br />
 **CFLAGS** 	:=	pour les flags (-Wall -Werror -Wextra ...)<br />
 **CPPFLAGS** := pour les flags en C++
 **NAME**		:=  nom de l'éxecutable créé<br />
 **SRCS**		:=  tous les fichiers sources utiles pour créer l'éxec<br />
-file1\ <br />
-file2\ <br />
-file3 <br />
-**OBJ**			:=  **$(SRCS:.c=.o)** liste des objets crées à partir de **SRCS**<br />
-
-### Regles
-**all**  make par defaut<br />
+**OBJ**			:=   toud les objets crées à partir de **SRCS**<br />
 <br />
-Les règles fonctionnent comme suit : <br />
-**resultat : sources**<br />
-**$<** fait réference à la source de la règle<br />
-**$@** fait réference au(x) resultat(s) de la règle<br />
-<br />
-**%.o:	%.c**  crée les .o à partir des .c, doit être suivi par la ligne suivante :<br />
->**$(CC) $(CFLAGS) -c $< -o $@**<br />
+### prefix / suffix
+```Makefile
+SRCS		:= $(addprefix $(SRCS_D), $(addsuffix .c, $(SRCS_F)))
+             ^                      ^__ ajoute le suffixe .c a la constante SRCS_F. Donc ajoute .c a tout les fichiers etant definit dans SRCS_F
+             |__ ajoute le prefix contenu dans SRCS_D, dans l'exemple : "srcs/"
+          Ce qui fabrique les chemins suivants : srcs/file1.c, srcs/file2.c, srcs/file3.c et srcs/main.c
 
+Idem avec OBJ en remplacant .c par .o dans l'addsuffix
+```
+
+### Exemple
+``` Makefile
+CC        := cc
+CFLAGS    := -g -Wall -Wextra -Werror
+
+NAME      := name
+
+SRCS_D    := srcs/
+
+LIBFT_D   := $(SRCS_D)/libft
+
+SRCS_F    := file1 file2 file3 ... main
+
+SRCS      := $(addprefix $(SRCS_D), $(addsuffix .c, $(SRCS_F)))
+OBJ       := $(addprefix $(SRCS_D), $(addsuffix .o, $(SRCS_F)))
+
+all:            $(NAME)
+
+$(NAME):        $(OBJ)
+        @make -C $(LIBFT_D)
+        @mv $(LIBFT_D)/libft.a .
+        @ar rcs $(NAME) $(OBJ) <-- facultatif, seulement pour creer une biblio
+
+%$(SRCS_D).o:   %$(SRCS_D).c
+        $(CC) $(CFLAGS) -I include -c $< -o $@
+
+clean:
+        @rm -f $(OBJ)
+        @cd srcs/libft; make clean
+
+fclean:         clean
+        @rm -f $(NAME)
+        @cd srcs/libft; make fclean
+
+re:             fclean all
+
+.PHONY:         all clean fclean re bonus
+```
+# Compilation
+### Fonctionnement
+### Options
 # Valgrind
 
+```bash
+valgrind --leak-check=full --track-origins=yes
+```
 **--leak-check=full** : Voir toutes les fuites <br>
 **--track-origins=yes** : Trouver l'origine des variables non initialisées.
-
 
