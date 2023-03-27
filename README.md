@@ -48,6 +48,7 @@ Raccourcis de vscode, de vim, de terminal et autres tips utiles.
 **clean**   supprime les .o <br />
 **fclean**  supprime les .o et l'executable / biblio<br />
 **re**      comme fclean et re make derriere<br />
+**.PHONY**  evite d'appeler un fichier qui se nomme pareil qu'une regle<br />
 <br />
 ### Noms et definitions
 **"VAR :="**  definit la constante VAR<br />
@@ -58,10 +59,12 @@ Raccourcis de vscode, de vim, de terminal et autres tips utiles.
 **NAME**		:=  nom de l'éxecutable créé<br />
 **SRCS**		:=  tous les fichiers sources utiles pour créer l'éxec<br />
 **OBJ**			:=   toud les objets crées à partir de **SRCS**<br />
+**$<** fait réference à la source de la règle<br />
+**$@** fait réference au(x) resultat(s) de la règle<br />
 <br />
 ### prefix / suffix
 ```Makefile
-SRCS		:= $(addprefix $(SRCS_D), $(addsuffix .c, $(SRCS_F)))
+SRCS	:= $(addprefix $(SRCS_D), $(addsuffix .c, $(SRCS_F)))
              ^                      ^__ ajoute le suffixe .c a la constante SRCS_F. Donc ajoute .c a tout les fichiers etant definit dans SRCS_F
              |__ ajoute le prefix contenu dans SRCS_D, dans l'exemple : "srcs/"
           Ce qui fabrique les chemins suivants : srcs/file1.c, srcs/file2.c, srcs/file3.c et srcs/main.c
@@ -109,7 +112,25 @@ re:             fclean all
 ```
 # Compilation
 ### Fonctionnement
+**Preprocessing :**     cree des fichiers temporaires<br />
+**Compilation :**       cree les .o a partir de ces fichiers temporaires<br />
+**Edition des liens**:  cree l'executable a partir des .o<br />
+
+**Preprocessing + Compilation**   ```bash gcc -c file.c``` --> sort un file.o <br />
+**Edition des liens**             ```bash gcc -o exec file.o``` --> sort exec <br />
+
 ### Options
+**-c** compile mais ne lie pas<br />
+**-o** permet l'edition des liens et de nommer le fichier executable<br />
+**-g** permet le debuging<br />
+**-l** cherche une librairie<br />
+**-L** cherche le dossier d'une librairie<br />
+**-I** cherche le dossier des headers (.h)<br />
+**-Werror** tout les warnings deviennent errors<br />
+**-Wall** affiche tout les warnings<br />
+**-Wextra** affiche d'autres warnings non gere par -Wall<br />
+
+
 # Valgrind
 
 ```bash
