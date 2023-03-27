@@ -1,6 +1,6 @@
 # Survivor-Notes
 Des notes persos pour la programmation.<br />
-Raccourcis de vim, de terminal et autres tips utiles.
+Raccourcis de vscode, de vim, de terminal et autres tips utiles.
 
 
 # Terminator
@@ -11,6 +11,19 @@ Raccourcis de vim, de terminal et autres tips utiles.
 **ctrl-shift-P**  (Previous) fenêtre précèdente<br />
 **ctrl-shift-X**  Passe en plein écran la fenêtre actuelle (faire pareil pour revenir comme avant)
 
+
+# VSCode
+**alt-fleche**   deplace une ligne (en haut ou en bas)<br />
+**ctrl-maj-k**   supprime une ligne<br />
+**ctrl-/**       ajoute / supprime un commentaire a la ligne <br />
+**ctrl-maj-a**   ajoute un ensemble de commentaire<br />
+**ctrl-p**       aller au fichier<br />
+**ctrl-tab**     aller au fichier suivant <br />
+**ctrl-w**       fermer le fichier en cours <br />
+**ctrl-\\**      fractionner l'editeur <br />
+**ctrl-1**       aller sur le groupe 1 <br />
+**ctrl-2**       aller sur e groupe 2 <br />
+**ctrl-`**       aller sur le terminal <br />
 
 # VIM
 **I**		insert mode<br />
