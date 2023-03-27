@@ -2,8 +2,12 @@
 Des notes persos pour la programmation.<br />
 Raccourcis de vscode, de vim, de terminal et autres tips utiles.
 
+# Sommaire
 
-# Terminator
+- [Terminator](#Terminator)
+
+
+## Terminator
 **ctrl-shift-E**  sépare la fenetre actuelle en une nouvelle fenêtre verticale<br />
 **ctrl-shift-O**  sépare la fenetre actuelle en une nouvelle fenêtre horizontale<br />
 **ctrl-shift-W**  ferme la fenêtre actuelle<br />
@@ -12,7 +16,7 @@ Raccourcis de vscode, de vim, de terminal et autres tips utiles.
 **ctrl-shift-X**  Passe en plein écran la fenêtre actuelle (faire pareil pour revenir comme avant)
 
 
-# VSCode
+## VSCode
 **alt-fleche**   deplace une ligne (en haut ou en bas)<br />
 **ctrl-maj-k**   supprime une ligne<br />
 **ctrl-/**       ajoute / supprime un commentaire a la ligne <br />
@@ -25,7 +29,7 @@ Raccourcis de vscode, de vim, de terminal et autres tips utiles.
 **ctrl-2**       aller sur e groupe 2 <br />
 **ctrl-`**       aller sur le terminal <br />
 
-# VIM
+## VIM
 **I**		insert mode<br />
 **:x** 	enregistre et quitte<br />
 **:w**  enregistre<br />
@@ -41,7 +45,7 @@ Raccourcis de vscode, de vim, de terminal et autres tips utiles.
 **shift + V** sélectionne une ligne (retaper pour retirer)<br />
 
 
-# Makefile
+## Makefile
 
 ### Regles
 **all**     make par defaut<br />
@@ -110,7 +114,7 @@ re:             fclean all
 
 .PHONY:         all clean fclean re bonus
 ```
-# Compilation
+## Compilation
 ### Fonctionnement
 **Preprocessing :**     cree des fichiers temporaires<br />
 **Compilation :**       cree les .o a partir de ces fichiers temporaires<br />
@@ -131,7 +135,7 @@ re:             fclean all
 **-Wextra** affiche d'autres warnings non gere par -Wall<br />
 
 
-# Valgrind
+## Valgrind
 
 ```bash
 valgrind --leak-check=full --track-origins=yes
