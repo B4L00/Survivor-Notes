@@ -138,8 +138,8 @@ re:             fclean all
 **Compilation :**       cree les .o a partir de ces fichiers temporaires<br />
 **Edition des liens**:  cree l'executable a partir des .o<br />
 
-**Preprocessing + Compilation**   ```bash gcc -c file.c``` --> sort un file.o <br />
-**Edition des liens**             ```bash gcc -o exec file.o``` --> sort exec <br />
+**Preprocessing + Compilation**   ```gcc -c file.c``` --> sort un file.o <br />
+**Edition des liens**             ```gcc -o exec file.o``` --> sort exec <br />
 
 ### Options
 **-c** compile mais ne lie pas<br />
