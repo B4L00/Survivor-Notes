@@ -17,6 +17,7 @@ Raccourcis de vscode, de vim, de terminal et autres tips utiles.
   - [Options](#Options)
 - [Valgrind](#Valgrind)
 
+---------------------------
 
 ## Terminator
 **ctrl-shift-E**  sépare la fenêtre actuelle en une nouvelle fenêtre verticale<br />
