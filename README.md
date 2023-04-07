@@ -2,6 +2,8 @@
 Des notes persos pour la programmation.<br />
 Raccourcis de vscode, de vim, de terminal et autres tips utiles.
 
+---------------------------
+
 # Sommaire
 
 - [Terminator](#Terminator)
@@ -112,20 +114,18 @@ OBJ       := $(addprefix $(SRCS_D), $(addsuffix .o, $(SRCS_F)))
 all:            $(NAME)
 
 $(NAME):        $(OBJ)
-        @make -C $(LIBFT_D)
-        @mv $(LIBFT_D)/libft.a .
-        @ar rcs $(NAME) $(OBJ) <-- facultatif, seulement pour créer une biblio
-
-%.o:   %.c
-        $(CC) $(CFLAGS) -I include -c $< -o $@
+        make -C $(LIBFT_D)
+        mv $(LIBFT_D)/libft.a .
+        ar rcs $(NAME) $(OBJ) <-- facultatif, seulement pour créer une biblio
+        $(CC) $(CFLAGS) $(OBJ) -L. -lft -o $(NAME) <-- pour créer un exec 
 
 clean:
-        @rm -f $(OBJ)
-        @cd srcs/libft; make clean
+        rm -f $(OBJ)
+        cd srcs/libft; make clean
 
 fclean:         clean
-        @rm -f $(NAME)
-        @cd srcs/libft; make fclean
+        rm -f $(NAME)
+        cd srcs/libft; make fclean
 
 re:             fclean all
 
