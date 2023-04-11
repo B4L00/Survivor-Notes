@@ -121,11 +121,10 @@ $(NAME):        $(OBJ)
 
 clean:
         rm -f $(OBJ)
-        cd srcs/libft; make clean
 
 fclean:         clean
         rm -f $(NAME)
-        cd srcs/libft; make fclean
+        make fclean -C $(LIBFT_D)
 
 re:             fclean all
 
