@@ -43,6 +43,9 @@ Raccourcis de vscode, de vim, de terminal et autres tips utiles.
 **ctrl-1**       aller sur le groupe 1 <br />
 **ctrl-2**       aller sur e groupe 2 <br />
 **ctrl-`**       aller sur le terminal <br />
+<br />
+Pour mettre les tabs par défaut : ctrl+, => affiche les options<br />
+Décocher dans espace de travail **Editor: Insert Spaces** <br />
 
 ---------------------------
 
