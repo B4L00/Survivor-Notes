@@ -161,8 +161,11 @@ re:             fclean all
 ## Valgrind
 
 ```bash
-valgrind --leak-check=full --track-origins=yes
+valgrind --leak-check=full --show-leak-kinds=all
 ```
 **--leak-check=full** : Voir toutes les fuites <br>
-**--track-origins=yes** : Trouver l'origine des variables non initialisées.
+**--track-origins=yes** : Trouver l'origine des variables non initialisées. <br>
+```bash
+valgrind --track-fds=yes --leak-check=full --show-leak-kinds=all --trace-children=yes
+```
 
