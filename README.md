@@ -168,4 +168,7 @@ valgrind --leak-check=full --show-leak-kinds=all
 ```bash
 valgrind --track-fds=yes --leak-check=full --show-leak-kinds=all --trace-children=yes
 ```
-
+```bash
+valgrind --track-fds=yes --leak-check=full --show-leak-kinds=all --child-silent-after-fork=yes
+```
+**--child-silent-after-fork=yes** : ne montre pas les erreurs de leaks dans les processus fils.
