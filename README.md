@@ -155,6 +155,9 @@ re:             fclean all
 **-Werror** tous les warnings deviennent errors<br />
 **-Wall** affiche tous les warnings<br />
 **-Wextra** affiche d'autres warnings non géré par -Wall<br />
+**-fsanitize=thread -g**<br /> 
+**-fsanitize=address -g**<br />
+fsanitize ne doit pas etre utilise en meme temps que valgrind <br />
 
 ---------------------------
 
@@ -165,10 +168,15 @@ valgrind --leak-check=full --show-leak-kinds=all
 ```
 **--leak-check=full** : Voir toutes les fuites <br>
 **--track-origins=yes** : Trouver l'origine des variables non initialisées. <br>
+**--tool=helgrind** : Detecte les erreurs de synchronisation dans les threads <br>
+**--tool=drd** : Detecte les erreurs dans les threads <br>
 ```bash
 valgrind --track-fds=yes --leak-check=full --show-leak-kinds=all --trace-children=yes
 ```
 ```bash
 valgrind --track-fds=yes --leak-check=full --show-leak-kinds=all --child-silent-after-fork=yes
+```
+```bash
+valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --tool=helgrind --tool=drd --trace-children=yes --track-fds=yes
 ```
 **--child-silent-after-fork=yes** : ne montre pas les erreurs de leaks dans les processus fils.
