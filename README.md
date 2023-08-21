@@ -6,6 +6,7 @@ Raccourcis de vscode, de vim, de terminal et autres tips utiles.
 
 # Sommaire
 
+- [Git](#Git)
 - [Terminator](#Terminator)
 - [VSCode](#VSCode)
 - [VIM](#VIM)
@@ -18,6 +19,17 @@ Raccourcis de vscode, de vim, de terminal et autres tips utiles.
   - [Fonctionnement](#Fonctionnement)
   - [Options](#Options)
 - [Valgrind](#Valgrind)
+
+---------------------------
+
+## Git
+git branch nom : cree une nouvelle branche<br />
+git checkout nom : switch de branche<br />
+git add nom_fichier : ajoute un fichier<br />
+git commit -m "message" : enregistre les modifications en local<br />
+git push : enregistre sur le distant<br />
+git pull : recupere la branch main avec les modifications<br />
+git merge nom : assemble une branche avec le main<br />
 
 ---------------------------
 
