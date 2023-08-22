@@ -29,7 +29,16 @@ git add nom_fichier : ajoute un fichier<br />
 git commit -m "message" : enregistre les modifications en local<br />
 git push : enregistre sur le distant<br />
 git pull : recupere la branch main avec les modifications<br />
-git merge nom : assemble une branche avec le main<br />
+git merge nom : assemble une branche (nom) avec la branche actuelle<br />
+git revert HEAD^ : pour annuler le dernier commit commite<br />
+
+Si on a add un fichier qu'on ne voulait pas : git stash, puis creer une nouvelle branche et aller dedans, puis git stash list pour avoir la liste de ce qui a ete sauvegarder, recopier l'identifiant et faire git stash apply stash@{0} par exemple.<br />
+<br />
+Si on a commit des fichiers depuis la mauvaise branche, alors il faut recuperer l'identifiant du dernier commit grace a git log, faire git reset --hard HEAD^ pour supprimer le dernier commit de la branche, creer une nouvelle branche et aller dedans puis faire git reset --hard id, avec id l'identifiant du commit.<br />
+<br />
+Si on veut modifier un message de commit : git commit --amend -m "nouveau message"<br />
+<br />
+Si on veut rajouter des fichiers dans le commit : git add fichier, puis git commit --amend --no-edit<br />
 
 ---------------------------
 
