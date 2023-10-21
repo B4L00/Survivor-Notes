@@ -184,9 +184,6 @@ fsanitize ne doit pas etre utilise en meme temps que valgrind <br />
 
 ## Valgrind
 
-```bash
-valgrind --leak-check=full --show-leak-kinds=all
-```
 **--leak-check=full** : Voir toutes les fuites <br>
 **--track-origins=yes** : Trouver l'origine des variables non initialisées. <br>
 **--tool=helgrind** : Detecte les erreurs de synchronisation dans les threads <br>
@@ -194,10 +191,13 @@ valgrind --leak-check=full --show-leak-kinds=all
 **--child-silent-after-fork=yes** : ne montre pas les erreurs de leaks dans les processus fils. <br>
 **--suppressions=FILENAME** : supprime les leaks depuis un fichier <br>
 ```bash
+valgrind --leak-check=full --show-leak-kinds=all
+```
+```bash
 valgrind --track-fds=yes --leak-check=full --show-leak-kinds=all --trace-children=yes
 ```
 ```bash
-valgrind --track-fds=yes --leak-check=full --show-leak-kinds=all --trace-children=yes --trace-children=yes --track-fds=yes --suppressions=readline.supp
+valgrind --leak-check=full --show-leak-kinds=all --trace-children=yes --track-origins=yes --track-fds=yes  --suppressions=readline.supp
 ```
 ```bash
 valgrind --track-fds=yes --leak-check=full --show-leak-kinds=all --child-silent-after-fork=yes
