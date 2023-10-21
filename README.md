@@ -191,8 +191,13 @@ valgrind --leak-check=full --show-leak-kinds=all
 **--track-origins=yes** : Trouver l'origine des variables non initialisées. <br>
 **--tool=helgrind** : Detecte les erreurs de synchronisation dans les threads <br>
 **--tool=drd** : Detecte les erreurs dans les threads <br>
+**--child-silent-after-fork=yes** : ne montre pas les erreurs de leaks dans les processus fils. <br>
+**--suppressions=FILENAME** : supprime les leaks depuis un fichier <br>
 ```bash
 valgrind --track-fds=yes --leak-check=full --show-leak-kinds=all --trace-children=yes
+```
+```bash
+valgrind --track-fds=yes --leak-check=full --show-leak-kinds=all --trace-children=yes --trace-children=yes --track-fds=yes --suppressions=readline.supp
 ```
 ```bash
 valgrind --track-fds=yes --leak-check=full --show-leak-kinds=all --child-silent-after-fork=yes
@@ -200,4 +205,3 @@ valgrind --track-fds=yes --leak-check=full --show-leak-kinds=all --child-silent-
 ```bash
 valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --tool=helgrind --tool=drd --trace-children=yes --track-fds=yes
 ```
-**--child-silent-after-fork=yes** : ne montre pas les erreurs de leaks dans les processus fils.
