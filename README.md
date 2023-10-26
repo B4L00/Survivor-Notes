@@ -6,8 +6,8 @@ Raccourcis de vscode, de vim, de terminal et autres tips utiles.
 
 # Sommaire
 
-- [Git](#Git)
-- [Terminator](#Terminator)
+- 1. [Git](#Git)
+- 2. [Terminator](#Terminator)
 - [VSCode](#VSCode)
 - [VIM](#VIM)
 - [Makefile](#Makefile)
